@@ -23,6 +23,98 @@
             <h1 class="section-title">Choose Your Plan</h1>
             <p>Make sure you get the most for your money!</p>
         </section>
+        <nav>
+            <ul>
+                <li><a href="#combinators">Combinators</a></li>
+                <ul>
+                    <li><a href="#adjacent-sibling">Adjacent Sibling</a></li>
+                    <li><a href="#general-sibling">General Sibling</a></li>
+                    <li><a href="#child">Child</a></li>
+                    <li><a href="#descendant">Descendant</a></li>
+                </ul>
+            </ul>
+        </nav>
+        <fieldset>
+            <legend id="combinators">Combinators</legend>
+            <fieldset>
+                <legend id="adjacent-sibling">Combinators - Adjacent Sibling</legend>
+                <pre class="styled-pre">
+h2 + p {
+    color: red;
+}</pre>
+                <ol>
+                    <li>✅Elements share the same parent</li>
+                    <li>✅Second Element comes <bold>immediately</bold> after first element</li>
+                </ol>
+                <div id="adjacent-sibling-example">
+                    <p>CSS applied</p>
+                    <h2>Not Applied</h2>
+                    <p>CSS applied</p>
+                    <h2>Not Applied</h2>
+                    <h3>Not Applied</h3>
+                    <p>Not Applied</p>
+                    <h2>Not Applied</h2>
+                    <p>CSS Applied</p>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend id="general-sibling">Combinators - General Sibling</legend>
+                <pre class="styled-pre">
+h2 ~ p {
+    color: red;
+}</pre>
+                <ol>
+                    <li>✅Elements share the same parent</li>
+                    <li>✅Second Element comes after first element, doesn't need to be directly after</li>
+                </ol>
+                <div id="general-sibling-example">
+                    <h2>Not Applied</h2>
+                    <p>CSS applied</p>
+                    <h2>Not Applied</h2>
+                    <h3>Not Applied</h3>
+                    <p>CSS Applied</p>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend id="child">Combinators - Child</legend>
+                <pre class="styled-pre">
+div > p {
+    color: red;
+}</pre>
+                <ol>
+                    <li>✅Second element is a direct child of first element</li>
+                </ol>
+                <div id="child-example">
+                    <div>Not applied</div>
+                    <p>CSS applied</p>
+                    <div>Not applied</div>
+                    <article>
+                        <p>Not applied (not a direct child)</p>
+                    </article>
+                    <p>CSS applied</p>
+                    </div>
+            </fieldset>
+            <fieldset>
+                <legend id="descendant">Combinators - Descendant</legend>
+                <pre class="styled-pre">
+div p {
+    color: red;
+}</pre>
+                <ol>
+                    <li>✅Second element is a descendant of the first element</li>
+                </ol>
+                <div id="descendant-example">
+                    <div>Not applied</div>
+                    <p>CSS applied</p>
+                    <div>Not applied</div>
+                    <article>
+                        <p>Not applied (applied even though not a direct descendant)</p>
+                    </article>
+                    <p>CSS applied</p>
+                </div>
+            </fieldset>
+        </fieldset>
+
     </main>
 </body>
 

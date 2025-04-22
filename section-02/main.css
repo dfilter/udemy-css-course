@@ -23,3 +23,32 @@ body {
   color: white;
   font-family: "Anton", sans-serif;
 }
+
+/* adjacent sibling: siblings following h2 will have the style applied to them */
+#adjacent-sibling-example h2 + p {
+  color: red;
+}
+
+#general-sibling-example h2 ~ p {
+  color: red;
+}
+
+#child-example > p {
+  color: red;
+}
+
+#descendant-example p {
+  color: red;
+}
+
+.styled-pre {
+  background-color: #f5f5f5;
+  color: #333;
+  padding: 1rem;
+  border-radius: 6px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.95rem;
+  overflow-x: auto;
+  white-space: pre-wrap; /* wrap long lines */
+  border: 1px solid #ddd;
+}
