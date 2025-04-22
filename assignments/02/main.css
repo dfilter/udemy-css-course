@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+}
+
+.container > :last-child:hover {
+  background-color: lightgreen;
+}
+
+.box {
+  display: inline-block;
+  vertical-align: middle;
+  background-color: lightblue;
+  border: 5px solid black;
+  margin: 1px 2px 3px 4px;
+  padding: 4px 3px 2px 1px;
+  width: calc(50% - 10px);
+  height: 300px;
+}
+
+/* .first-box {
+  height: 100vh;
+  visibility: hidden;
+  display: none;
+} */
