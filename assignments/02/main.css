@@ -21,8 +21,8 @@
   height: 300px;
 }
 
-/* .first-box {
-  height: 100vh;
+.container > :first-of-type {
+  /* height: 100vh; */
   visibility: hidden;
-  display: none;
-} */
+  /* display: none; */
+}
