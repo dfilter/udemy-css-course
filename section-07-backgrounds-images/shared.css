@@ -7,6 +7,18 @@ body {
   margin: 0;
 }
 
+.backdrop {
+  position: fixed;
+  display: none;
+  /* NOTE: top and left are required since margin collapsing is happening for the testimonial class */
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
 .main-header {
   width: 100%;
   position: fixed;
