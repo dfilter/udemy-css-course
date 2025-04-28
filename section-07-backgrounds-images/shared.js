@@ -6,14 +6,14 @@ const toggleButton = document.querySelector(".toggle-button");
 const mobileNav = document.querySelector(".mobile-nav");
 
 function showModalBackdrop() {
-  backdrop.style.display = "block";
-  modal.style.display = "block";
+  backdrop.classList.add("open");
+  modal.classList.add("open");
 }
 
 function hideModalBackdrop() {
-  backdrop.style.display = "none";
-  modal.style.display = "none";
-  mobileNav.style.display = "none";
+  backdrop.classList.remove("open");
+  modal.classList.remove("open");
+  mobileNav.classList.remove("open");
 }
 
 planButton.forEach((button) => {
@@ -24,6 +24,6 @@ backdrop.addEventListener("click", hideModalBackdrop);
 cancelButton.addEventListener("click", hideModalBackdrop);
 
 toggleButton.addEventListener("click", () => {
-  mobileNav.style.display = "block";
-  backdrop.style.display = "block";
+  mobileNav.classList.add("open");
+  backdrop.classList.add("open");
 });
