@@ -17,14 +17,11 @@
   max-width: 580px;
   display: inline-block;
   vertical-align: middle;
-  box-shadow: 3px 3px 5px 3px rgba(0, 0, 0, 0.5);
+  box-shadow: 3px 3px 5px 3px rgba(0, 0, 0, 0.3);
 }
 
 .testimonial__image {
   width: 100%;
-  /* NOTE: if using an image with a parent applying box-shadow and theres 
-  whitespace at the bottom you can set vertical-align-top on the child to 
-  get rid of the whitespace. display: block can also be used */
   vertical-align: top;
 }
 
